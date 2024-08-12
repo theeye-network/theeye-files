@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+
+{% block main %}
+<form method="POST">
+  <div class="container">
+      <h1 style="font-size: 28px;" id="eve">Incident Reporting Form</h1>
+      <p>Use this form to report any cybersecurity-related incidents.</p><br/>
+      <p>You can also use this form to register complaints regarding cyber-incidents like cyber-bullying, report transmission of abusive/explicit content online, and our incident response team will get back to you ASAP.</p>
+        <section id="events2">
+          <div class="mb-3">
+            <label for="formdate" id="form-label">Date The Incident Occured:</label>
+            <input type="Date" class="form-control" name="Date" id="formdate" placeholder="DD/MM/YYYY" required>
+          </div>
+          <div class="mb-3">
+            <p for="formtb" id="form-label">Your contact details (Name, Email, Phone, etc. | Optional):</p>
+            <textarea class="form-control" name="Contact" id="formtb" rows="3" name=""></textarea>
+          </div>
+          <div class="mb-3">
+            <p for="formtb" id="form-label">Information regarding affected system/network/user:</p>
+            <textarea class="form-control" name="Information regarding System/Network/User" id="formtb" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <p for="formtb" id="form-label">Symptoms observed/Background of incident:</p>
+            <textarea class="form-control" name="Symptoms Observed/Background" id="formtb" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <p for="formtb" id="form-label">Relevant technical information:</p>
+            <textarea class="form-control" id="formtb" rows="3" name="Technical Information" placeholder="Any info such as security systems deployed, actions taken to mitigate the damage, etc.." required></textarea>
+          <div>
+          <div class="mb-3">
+            <p for="formtb" id="form-label">Relevant non-technical information:</p>
+            <textarea class="form-control" id="formtb" name="Non-Technical Information" rows="3" placeholder="Any other information.." required></textarea>
+          <div>
+            <button style="cursor:pointer;" type="submit" id="btnsub" data-bs-toggle="button">Submit Form</button>
+          </div>
+        </section>
+        
+
+    </div>
+
+  </section>
+
+</form>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<br/><br/><br/><br/><br/><br/>
+{% endblock %}

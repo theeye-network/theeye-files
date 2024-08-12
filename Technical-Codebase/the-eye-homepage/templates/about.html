@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+
+{% block main %}
+<form action="https://files.cseatheeye.com/about" method="get">
+      <h1 style="font-size: 28px;" id="eve">ABOUT THE EYE</h1>
+      <section id="events">
+        <img src="https://i.imgur.com/BPbmomb.jpg">
+        <p><span style="font-size: 45px;">Who We Are</span><br>The Eye is a cybersecurity-focus college club under the Computer Science and Engineering Association in PSG College of Technology. We have multiple verticals to help our members learn and practice cybersecurity in their every-day life. We organize events in order to increase awareness of Cybersecurity within the college, and also perform other activities like research and documentation, secure coding and mock box attacks.</p>
+      </section>
+          
+      <section id="medias">
+        <p><span style="font-size: 45px;">What We Do</span><br>The Eye has 8 Verticals under the club:
+        <br/><br/>
+        <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',type='osint')}}" style="color:white;text-decoration: none;border-bottom: 1px dotted white;"><span style="font-size: 25px;">OSINT</span></a>
+        <br/>The OSINT (Open Source INTelligence) Team, headed by <b>Aswath Harish</b> is responsible for contributing to already-existing open source intelligence projects to improve the world of Cybersecurity. Click the title to see tools published by our set of skilled OSINT developers on GitHub.
+        <br/><br/>
+        <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',type='intel')}}" style="color:white;text-decoration: none;border-bottom: 1px dotted white;"><span style="font-size: 25px;">Intel</span></a>
+        <br/>The Intel Team, headed by <b>Ashwant Krishna</b>, develops cybersecurity solutions for proprietary use within The Eye based on Python and the NMap Scripting Language for already-available tools like Maltego, NMap and other custom tools created by The Eye. Click the title to see any tools published by our set of skilled intelligence developers.
+        <br/><br/>
+        <span style="font-size: 25px;">Oculus UI</span>
+        <br/>Oculus UI, headed by <b>Navaneetha Krishnan S</b> is a secure coding project under the web development stream, simplifying the everyday club tasks within The Eye - for internal usage.
+        <br/><br/>
+        <span style="font-size: 25px;">Training</span>
+        <br/>The Training Team, coordinated by <b>Swetha M</b>, consists of a few core members - who organize self assessment-based cybersecurity training programmes exclusive to all the members of The Eye.
+        <br/><br/>
+        <span style="font-size: 25px;">Events and Social Media</span>
+        <br/>The Eye organizes cybersecurity-based events in order to spread awareness - like workshops, hackathons and treasure-hunts. The Events and Social Media team, headed by <b>Dhanush Gowdhaman</b>, are responsible for ideating and conducting events, as well as handling the Social Media handles of The Eye.
+        <br/><br/>
+        <span style="font-size: 25px;">Documentation</span>
+        <br/>The Documentation Team is responsible for writing and creating articles, research-work, and more relevant document-related tasks. There are 3 projects under the documentation team, headed by <b>Aaditya Rengarajan</b> - namely - the Case Study project where the team aims to work on case studies of security incidents worldwide, the Research Project where the team aims to perform R&D and write a research paper on something new, and the Articles Project where the team aims to write Security Guidelines, Quarterly Reports and Whitepapers for the club.
+        <br/><br/>
+        <span style="font-size: 25px;">YouTube</span>
+        <br/>The YouTube Team, headed by <b>Rohith Sundharamurthy</b>, works on YouTube videos to be released on the YouTube platform under The Eye.</p>
+        </section>
+
+</form>
+{% endblock %}

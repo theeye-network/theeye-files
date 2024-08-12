@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div>
+      <div class="vantaBG" id="hero-section" style="border-radius: 40px;">
+        <div id="greeting" style="width: 100%;background-color: rgba(0,0,0,0.6);border-radius: 40px;min-height: 90vh;justify-content: center; align-items: center;display: flex;"><h1>
+        WELCOME TO <br><span>THE EYE</span></h1></div>
+      </div>
+      {% if announcements!=[] %}
+      <h1 id="hof">Announcements</h1>
+      <section id="hall-of-fame">
+        <p><ul>
+            {% for i in announcements %}
+            <li>{{i|safe}}</li>
+            {% endfor %}
+        </ul></p>
+      </section>
+      {% endif %}
+      {% if HOF!=[] %}
+      <h1 id="hof">Hall of Fame</h1>
+      <section id="hall-of-fame">
+        <p>The Hall of Fame features the security researchers from PSG College of Technology who have either submitted at least one valid bug report to any bug bounty program or constantly been taking part in Capture-The-Flag contests and securing recognizable positions in the same. The Hall of Fame acknowledges the work of students who have contributed to a bounty program, or has made a significant contribution to PSG College of Technology.<br/>
+        <br/>
+        To be listed in the Hall of Fame, you must write an email to 21Z202@psgtech.ac.in with a valid bug report, and a link to prove the submission and recognition of the same - alongwith a PDF of a scan of your ID Card.
+        <br/><br/>
+        <u>Hall of Fame</u></p>
+        <p><ul>
+            {% for i in HOF["names"] %}
+            <li>{{i}}</li>
+            {% endfor %}
+        </ul></p>
+      </section>
+      {% endif %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+<script>
+VANTA.HALO({
+  el: ".vantaBG",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  baseColor: 0x66cc99,
+  backgroundColor: 0x333333,
+  amplitudeFactor: 2.00,
+  xOffset: 0.01,
+  yOffset: 0.01,
+  size: 0.70
+})
+</script>
+<script type="text/javascript">
+    styles = "canvas{ border-radius: 50px;}"
+    var styleSheet = document.createElement("style")
+styleSheet.innerText = styles
+document.head.appendChild(styleSheet)
+</script>
+  </div>
+  {% endblock %}

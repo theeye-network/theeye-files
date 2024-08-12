@@ -1,0 +1,19 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    {{rel['title']}}
+{% endblock %}
+
+
+{% block main %}
+
+<h1>{{rel['title']}}</h1>
+<h2>by <a style="text-decoration: none;color: inherit;" href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{rel['author_link']}}" target="_blank">{{rel['author']}}</a> | {{rel['date']}}</h2>
+
+<section id="events" style="display:block!important;">
+    {{rel['content'].replace("</p> <p>","<br/><br/>") | safe}}
+</section>
+<br/><br/>
+
+{% endblock %}

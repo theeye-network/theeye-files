@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>ArcheTap</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='js/jquery.js')}}"></script>
+            <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='js/jquery.plugins.min.js')}}"></script>
+    <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='js/general.js')}}"></script>
+    <link rel="icon" type="image/png" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='images/archtyp-logo-239x300.webp')}}" sizes="192x192">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/ficons.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/global.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/css3.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/all.min.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/normalize.min.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/lib.min.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/roboto.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/custom.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/plugins.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/hovercards.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/alerts.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/onlinetoday.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/fork-awesome.min.css')}}">
+    <link type="text/css" rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='css/mobile.min.css')}}">
+    </head>
+    <body>
+        <div id="container">
+            <a name="top" id="top"></a>
+            <header>
+                <nav id="panel">
+                    <div class="wrapper" style>
+                        <div id="sidenav">
+                            <div class="sidenav__bars"><i class="fas fa-bars"></i></div>
+                            <ul class="sidenav__menu nav">
+                                <li class="sidenav__home hidden-sm"><a href="https://breached.vc/"><i class="fas fa-home"></i></a></li>
+                                <li><a href="https://breached.vc/Announcement-Database-Index"><i class="fas fa-database"></i>Databases</a></li>
+                                <li><a href="https://breached.vc/upgrades"><i class="fas fa-star"></i>Upgrades</a></li>
+                                <li><a href="https://breached.vc/search"><i class="fas fa-search"></i>Search</a></li>
+                                <li><a href="http://breached65xqh64s7xbkvqgg7bmj4nj7656hcb7x4g42x753r7zmejqd.onion/"><i class="fa fa-user-secret"></i>Hidden Service</a></li>
+                                <li class="sidenav__extras dropdown">
+                                    <a class="dropdown-button" href="https://files.cseatheeye.com/extras"><i class="fas fa-plus"></i>Extras</a>
+                                    <ul class="sidenav__sub-menu dropdown-content nav-columns rounded" data-position="-7" style="opacity: 0.00024672; margin-top: 0.998026px; display: none;">
+                                        <li><a href="https://breached.vc/newpoints"><i class="fas fa-coins"></i>Credits</a></li>
+                                        <li><a href="https://breached.vc/awards"><i class="fas fa-medal"></i>Awards</a></li>
+                                        <li><a href="https://breached.vc/bans"><i class="fas fa-user-slash"></i>Ban List</a></li>
+                                        <li><a href="https://breached.vc/misc.php?action=help"><i class="fas fa-briefcase"></i>Rules & Policies</a></li>
+                                        <li><a href="https://breached.vc/changelog"><i class="fa fa-rss-square"></i>Changelog</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="panel__user nav">
+                            <li>
+                                <a href="https://files.cseatheeye.com/login" class="panel__module panel__module--login rounded"><i class="fas fa-sign-in-alt"></i>Login</a>
+                            </li>
+                            <li class="talign-mright">
+                                <a href="https://files.cseatheeye.com/register" class="panel__module panel__module--register rounded"><i class="fas fa-user-plus"></i>Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="logo noselect">
+                    <div class="wrapper" style>
+                        <div class style="padding-top: 25px;padding-bottom: 85px;">
+                            <div class="wrapper">
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav id="breadcrumb" class="wrapper rounded-top" style>
+                <ul class="breadcrumb__main nav talign-mleft">
+                    <a href="https://breached.vc/"><span id="home_bit"><i class="fa fa-home"></i></span></a><span><span class>
+                    <a href="https://breached.vc/index.php">ArcheTap</a>
+                    </span>
+                    <span class="breadcrumb__sep"><i class="fas fa-angle-right hidden-md"></i></span>
+                    <span class="breadcrumb__active"><strong>Board Messages</strong></span>
+                    </span>
+                </ul>
+                <ul class="breadcrumb__fast-links nav talign-mright">
+                    <li class="hidden-lg"><a href="https://breached.vc/misc?action=markread&my_post_key=b53801b9bbba5eca505b7edd50ca3b49" class="rounded">Mark all as read</a></li>
+                    <li><a href="https://breached.vc/search?action=getdaily" class="rounded">Today's posts</a></li>
+                </ul>
+            </nav>
+            <main id="content" class="wrapper rounded-bottom" style>
+                <br>
+                <table border="0" cellspacing="0" cellpadding="5" class="tborder">
+                    <tbody>
+                        <tr>
+                            <td class="thead"><span class="smalltext"><strong>ArcheTap</strong></span></td>
+                        </tr>
+                        <tr>
+                            <td id="posts_container">
+                                <div id="posts">
+                                    <div class="post " style="" id="post_1418875">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-R3NGAAAAA"><span class="rf_elite">R3NGAAAAA</span></a>
+                                                    </div>
+                                                    <a href="https://files.cseatheeye.com/member.php?action=profile&amp;uid=253208"><img alt="" src="https://breached.vc/uploads/avatars/avatar_253208.jpg?dateline=1677651070" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    Elite User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                    <span class="socialsites__icon">
+                                                    <a href="https://t.me/https%3A%2F%2Ftelegram.org%2Fdl" title="telegram" rel="nofollow" target="_blank">
+                                                    <i class="fab fa-telegram" style="color: #2AABEE;"></i>
+                                                    </a>
+                                                    </span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">111</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">3</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Dec 2022</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=253208"><strong class="reputation_neutral">0</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418875#pid1418875" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418875#pid1418875" title="RE: Hello world">#2</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:31 AM">39 minutes ago</span> <span class="post_edit" id="edited_by_1418875"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418875">
+                                                    Welcome to ArcheTap forum&nbsp; <img src="https://breached.vc/images/smilies/wink.png" alt="Wink" title="Wink" class="smilie smilie_2">
+                                                </div>
+                                                <div class="signature scaleimages" style="border-top: 1px dashed #474747;">
+                                                    <span style="font-weight: bold;" class="mycode_b"><span style="font-style: italic;" class="mycode_i"><img src="https://external-content.duckduckgo.com/iu/?u=https://media.tenor.com/ofYCY_OJQ1kAAAAS/hacker-hack.gif" data-original-url="https://media.tenor.com/ofYCY_OJQ1kAAAAS/hacker-hack.gif" loading="lazy" alt="[Image: hacker-hack.gif]" class="mycode_img"></span></span><br>
+                                                    <span style="font-weight: bold;" class="mycode_b"><span style="font-style: italic;" class="mycode_i">***THIS IS_<span style="color: #c10300;" class="mycode_color">R3NGA***</span></span></span><br>
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418875">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons author_buttons float_left">
+                                                </div>
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                    <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/newreply.php?tid=71783&amp;replyto=1418875" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><i class="fas fa-reply"></i><span>Reply</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a name="pid1418868" id="pid1418868"></a>
+                                    <div class="post " style="" id="post_1418868">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-Javac"><span class="rf_noob">ProJavac</span></a>
+                                                    </div>
+                                                    <a href="https://files.cseatheeye.com/member.php?action=profile&amp;uid=357015"><img alt="" src="https://breached.vc/images/default_avatar.png" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    ArcheTap User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <img src="https://breached.vc/resources/ranks/member.png" alt="Member" title="Member">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">7</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">1</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Mar 2023</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=357015"><strong class="reputation_neutral">0</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418868#pid1418868" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418868#pid1418868" title="Hello world">#1</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:29 AM">41 minutes ago</span> <span class="post_edit" id="edited_by_1418868"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418868">
+                                                    Paschim Banga Gramin Bank's Bank Vault Encryption tool: <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('download')}}">Download Here</a>
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418868">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons author_buttons float_left">
+                                                </div>
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a name="pid1418888" id="pid1418888"></a>
+                                    <div class="post " style="" id="post_1418888">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-unRender"><span class="rf_noob">unRender</span></a>
+                                                    </div>
+                                                    <a href="https://breached.vc/member.php?action=profile&amp;uid=357015"><img alt="" src="https://breached.vc/images/default_avatar.png" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    ArcheTap User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <img src="https://breached.vc/resources/ranks/member.png" alt="Member" title="Member">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">7</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">1</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Mar 2023</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=357015"><strong class="reputation_neutral">0</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418888#pid1418888" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418888#pid1418888" title="RE: Hello world">#3</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:32 AM">38 minutes ago</span> <span class="post_edit" id="edited_by_1418888"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418888">
+                                                    <blockquote class="mycode_quote"><cite><span> (<span title="March 4, 2023, 10:31 AM">39 minutes ago</span>)</span>R3NGAAAAA Wrote:  <a href="https://breached.vc/Thread-Hello-world--71783?pid=1418875#pid1418875" class="quick_jump"></a></cite>Welcome to ArcheTap forum&nbsp; <img src="https://breached.vc/images/smilies/wink.png" alt="Wink" title="Wink" class="smilie smilie_2"></blockquote>
+                                                    <br>
+                                                    Welome Gift &nbsp; iGaf1rL{mNft@liFBt10hRss@53} &nbsp;<img src="https://breached.vc/images/smilies/biggrin.png" alt="Big Grin" title="Big Grin" class="smilie smilie_4">
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418888">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons author_buttons float_left">
+                                                </div>
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                    <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/newreply.php?tid=71783&amp;replyto=1418888" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><i class="fas fa-reply"></i><span>Reply</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a name="pid1418922" id="pid1418922"></a>
+                                    <div class="post " style="" id="post_1418922">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-D4RDVL"><span class="rf_elite">R3NGAAAAA</span></a>
+                                                    </div>
+                                                    <a href="https://files.cseatheeye.com/member.php?action=profile&amp;uid=253208"><img alt="" src="https://breached.vc/uploads/avatars/avatar_253208.jpg?dateline=1677651070" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    Elite User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                    <span class="socialsites__icon">
+                                                    <a href="https://t.me/https%3A%2F%2Ftelegram.org%2Fdl" title="telegram" rel="nofollow" target="_blank">
+                                                    <i class="fab fa-telegram" style="color: #2AABEE;"></i>
+                                                    </a>
+                                                    </span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">111</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">3</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Dec 2022</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=253208"><strong class="reputation_neutral">0</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418922#pid1418922" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418922#pid1418922" title="RE: Hello world">#4</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:39 AM">31 minutes ago</span> <span class="post_edit" id="edited_by_1418922"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418922">
+                                                   Maybe a little something on this? <br/><br/> pXGd3UGEU14E90xfVNzsZTY+atR8lF5a89j2u+1CsZU=<br/>
+                                                   name : secure office<br/>
+                                                    key : ihopethisislongg<br/>
+                                                    mode : ECB<br/>
+                                                    keySize : 128bits
+                                                </div>
+                                                <div class="signature scaleimages" style="border-top: 1px dashed #474747;">
+                                                    <span style="font-weight: bold;" class="mycode_b"><span style="font-style: italic;" class="mycode_i"><img src="https://external-content.duckduckgo.com/iu/?u=https://media.tenor.com/ofYCY_OJQ1kAAAAS/hacker-hack.gif" data-original-url="https://media.tenor.com/ofYCY_OJQ1kAAAAS/hacker-hack.gif" loading="lazy" alt="[Image: hacker-hack.gif]" class="mycode_img"></span></span><br>
+                                                    <span style="font-weight: bold;" class="mycode_b"><span style="font-style: italic;" class="mycode_i">***THIS IS_<span style="color: #c10300;" class="mycode_color">R3NGA***</span></span></span><br>
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418922">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons author_buttons float_left">
+                                                </div>
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                    <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/newreply.php?tid=71783&amp;replyto=1418922" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><i class="fas fa-reply"></i><span>Reply</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a name="pid1418926" id="pid1418926"></a>
+                                    <div class="post " style="" id="post_1418926">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-B33N"><span class="rf_elite">B33N</span></a>
+                                                    </div>
+                                                    <a href="https://files.cseatheeye.com/member.php?action=profile&amp;uid=191083"><img alt="" src="https://breached.vc/uploads/avatars/avatar_191083.gif?dateline=1677787089" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    Elite User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">194</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">41</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Oct 2022</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=191083"><strong class="reputation_positive">190</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418926#pid1418926" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418926#pid1418926" title="RE: Hello world">#5</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:40 AM">30 minutes ago</span> <span class="post_edit" id="edited_by_1418926"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418926">
+                                                    <blockquote class="mycode_quote"><cite><span> (<span title="March 4, 2023, 10:29 AM">41 minutes ago</span>)</span>Srf Wrote:  <a href="https://breached.vc/Thread-Hello-world--71783?pid=1418868#pid1418868" class="quick_jump"></a></cite>Any clue who this is? Is this one of us? This got onto the FBA list.</blockquote>
+                                                    <br>
+                                                    Welcome to ArcheTap Forum. 
+                                                </div>
+                                                <div class="signature scaleimages" style="border-top: 1px dashed #474747;">
+                                                    <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='images/securityFootage.jpeg')}}" data-original-url="{{url_for('static', filename='images/securityFootage.jpeg')}}" loading="lazy" alt="[Image: kynhuk.gif]" class="mycode_img"><br>
+                                                    <div style="text-align: left;" class="mycode_align"><span style="color: #008e02;" class="mycode_color"><span style="font-size: x-small;" class="mycode_size"><span style="font-style: italic;" class="mycode_i">&gt;&lt;Extra Flag: Here's a hash - <!-- c01bfaea0c9e5203082a433d6d1d73dab6eec31329607fdbefe8f91cd7fa1964 -->(wait i commented it bymistake, do the hardwork)&gt;&lt;</span></span></span></div>
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418926">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                    <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/newreply.php?tid=71783&amp;replyto=1418926" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><i class="fas fa-reply"></i><span>Reply</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a name="pid1418926" id="pid1418926"></a>
+                                    <div class="post " style="" id="post_1418926">
+                                        <div class="post__author scaleimages">
+                                            <div class="post__author-info">
+                                                <div class="post__user">
+                                                    <div class="post__user-profile largetext">
+                                                        <a href="https://breached.vc/User-B33N"><span class="rf_elite">B33N</span></a>
+                                                    </div>
+                                                    <a href="https://files.cseatheeye.com/member.php?action=profile&amp;uid=191083"><img alt="" src="https://breached.vc/uploads/avatars/avatar_191083.gif?dateline=1677787089" width="130" height="130"></a>
+                                                </div>
+                                                <div class="post__user-title">
+                                                    Elite User
+                                                    <span class="post__buddy-status"><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/online.php" title="Online" class="post__status post__status--online"></a></span>
+                                                </div>
+                                                <div class="post__user-stars hidden-md"></div>
+                                                <div class="post__user-badge">
+                                                    <br>
+                                                </div>
+                                            </div>
+                                            <div class="post__author-stats">
+                                                <div class="socialsites socialsites--postbit rounded">
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Posts:</span> <span class="float_right">194</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Threads:</span> <span class="float_right">41</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Joined:</span> <span class="float_right">Oct 2022</span>
+                                                </div>
+                                                <div class="post__stats-bit group">
+                                                    <span class="float_left">Reputation: </span> <span class="float_right">
+                                                    <a href="https://files.cseatheeye.com/reputation.php?uid=191083"><strong class="reputation_positive">190</strong></a>
+                                                    </span>
+                                                </div>
+                                                <!--<span class="user_service" data-years="6">6 Years of service</span>-->
+                                                <div class="post__user-awards"></div>
+                                            </div>
+                                        </div>
+                                        <div class="post_whole">
+                                            <div class="post_content">
+                                                <div class="post_head">
+                                                    <div class="float_right" style="vertical-align: top">
+                                                        <!--<strong><a href="Thread-RaidForums-Official-Telegram?pid=1418926#pid1418926" title="RaidForums Official Telegram">#1</a></strong>-->
+                                                        <div class="float_right" style="vertical-align: top">
+                                                            <strong><a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/Thread-Hello-world--71783?pid=1418926#pid1418926" title="RE: Hello world">#5</a></strong>
+                                                        </div>
+                                                    </div>
+                                                    <span class="post_date"><span title="March 4, 2023, 10:40 AM">30 minutes ago</span> <span class="post_edit" id="edited_by_1418926"></span></span>
+                                                </div>
+                                                <div class="post_body scaleimages" id="pid_1418926">
+                                                    <blockquote class="mycode_quote"><cite><span> (<span title="March 4, 2023, 10:29 AM">41 minutes ago</span>)</span>Srf Wrote:  <a href="https://breached.vc/Thread-Hello-world--71783?pid=1418868#pid1418868" class="quick_jump"></a></cite>SUSSY BAKAS</blockquote>
+                                                    <br>
+                                                    sus.jpg~~
+                                                </div>
+                                                <div class="signature scaleimages" style="border-top: 1px dashed #474747;">
+                                                    <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/{{url_for('static',&#32;filename='images/sus.jpg')}}" data-original-url="{{url_for('static', filename='images/sus.jpg')}}" loading="lazy" alt="[Image: kynhuk.gif]" class="mycode_img"><br>
+                                                    <div style="text-align: left;" class="mycode_align"><span style="color: #008e02;" class="mycode_color"><span style="font-size: x-small;" class="mycode_size"><span style="font-style: italic;" class="mycode_i">&gt;&lt;MAybe downloading the images and messing with them would fetch you flags?&gt;&lt;</span></span></span></div>
+                                                </div>
+                                                <div class="post_meta" id="post_meta_1418926">
+                                                    <div class="float_right">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post_controls">
+                                                <div class="postbit_buttons author_buttons float_left">
+                                                    <a href="https://t.me/MastaBeen" target="_blank" rel="noopener" title="Visit this user's website" class="postbit_website"><span>Website</span></a>
+                                                </div>
+                                                <div class="postbit_buttons post_management_buttons float_right">
+                                                    <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/newreply.php?tid=71783&amp;replyto=1418926" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><i class="fas fa-reply"></i><span>Reply</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/js/ougc_spoiler.js"></script>
+        <script type="text/javascript">
+            <!--
+            	lang.ougc_spoiler_show = "Show";
+            	lang.ougc_spoiler_hide = "Hide";
+            	lang.ougc_spoiler_title = "Spoiler";
+            // -->
+        </script>
+        <footer id="footer">
+            <div class="footer__upper">
+                <div class="wrapper talign-pright talign-pleft" style>
+                    <ul class="footer__general-links nav">
+                        <li><a href="https://breached.vc"><i class="fa fa-home footicon"></i>Breach Forums</a></li>
+                        <li><a href="https://files.cseatheeye.com/contact"><i class="fa fa-envelope footicon"></i>Contact Us</a></li>
+                        <li><a href="https://breached.vc/misc?action=help"><i class="fa fa-briefcase footicon"></i>Rules & Policies</a></li>
+                        <li><a href="https://wiki.breached.vc/en/transparency-reports" target="_blank"><i class="fa fa-rss footicon"></i>Transparency Reports</a></li>
+                        <li><a href="https://files.cseatheeye.com/changelog"><i class="fa fa-rss-square"></i>Changelog</a></li>
+                    </ul>
+                    <ul class="footer__social-links nav">
+                        <li><a href="https://t.me/Breached" target="_blank" alt="Telegram Messenger" title="Telegram Messenger" class="footer__telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                        <li><a href="https://twitter.com/Breached" target="_blank" alt="Twitter" title="Twitter" class="footer__telegram"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__lower">
+                <div class="wrapper talign-pright talign-pleft" style>
+                    <div class="footer__datetime"><strong>Current time:</strong> March 4, 2023, 11:11 AM</div>
+                    <div class="footer__copyright">
+                        Powered By <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, © 2002-2023 <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><!-- End task image code -->
+        <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/js/raid.js" defer></script>
+        <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/js/bf_theme.js"></script>
+        <div id="scrolltop" title="Jump Up" style="display:none"></div>
+        <script src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/CTF/ArcheTap/templates/js/scrolltop.js" async defer></script>
+    </body>
+</html>

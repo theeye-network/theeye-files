@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: jazeera_bold;
+        src: url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff2)
+            format("woff2"),
+          url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff)
+            format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: jazeera_light;
+        src: url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff2)
+            format("woff2"),
+          url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff)
+            format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: jazeera_medium;
+        src: url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff2)
+            format("woff2"),
+          url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff)
+            format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: jazeera_regular;
+        src: url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff2)
+            format("woff2"),
+          url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff)
+            format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      .logo {
+        width: 200px;
+        align-items: center;
+        border: 8px black;
+        padding: 40px;
+        background-origin: padding-box;
+      }
+
+      :root {
+        --animate-duration: 5s;
+      }
+
+      * {
+        font-family: jazeera_regular;
+      }
+
+      h3,
+      h4 {
+        font-family: jazeera_medium !important;
+      }
+
+      p {
+        font-family: jazeera_light;
+      }
+
+      a {
+        font-family: jazeera_regular;
+        text-decoration: none;
+        cursor: pointer !important;
+      }
+      body {
+        background-color: black !important;
+        font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif";
+      }
+      #vanta {
+        background-color: black !important;
+        height: 190vh !important;
+        width: 100% !important;
+        position: absolute;
+        z-index: -1;
+      }
+      #main {
+        background-color: rgb(0, 0, 0, 0.6);
+        z-index: 1;
+        position: relative;
+        padding: 25px;
+      }
+      .form {
+        margin-top: 75px;
+        padding: 25px 25px 25px 0px;
+        position: relative;
+        display: block;
+        color: white;
+        background-color: transparent;
+        width: 100% !important;
+        text-align: center !important;
+        height: 450px !important;
+        align-content: center !important;
+        align-self: center !important;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+      .decode-text {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+      }
+      .button {
+        background-color: #ffffff;
+        border: none;
+        color: rgb(0, 0, 0);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      #button-grow1 {
+        color: #74d8ff;
+        background-color: white;
+        border: 1px solid #65b5f6;
+        border-radius: 4px;
+        padding: 0 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      #button-grow2 {
+        color: #74d8ff;
+        background-color: white;
+        border: 1px solid #65b5f6;
+        border-radius: 4px;
+        padding: 0 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #button-grow1:hover {
+        transform: scale(1.1);
+      }
+      #button-grow2:hover {
+        transform: scale(1.1);
+      }
+
+      .space {
+        display: inline-block;
+        width: 10px;
+      }
+
+      .text-animation {
+        display: inline-block;
+        position: relative;
+        color: transparent;
+        text-transform: uppercase;
+      }
+      .text-animation:before {
+        content: "";
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #ffffff;
+        width: 0;
+        height: 1.2em;
+        -webkit-transform: translate(-50%, -55%);
+        -ms-transform: translate(-50%, -55%);
+        transform: translate(-50%, -55%);
+      }
+      .text-animation.state-1:before {
+        width: 1px;
+      }
+      .text-animation.state-2:before {
+        width: 0.9em;
+      }
+      .text-animation.state-3 {
+        color: rgb(144, 252, 243);
+      }
+      .text-animation.state-3:before {
+        width: 0;
+      }
+
+      div {
+        font-family: "Share Tech Mono", monospace;
+      }
+
+      body {
+        height: 100vh;
+        align-items: center;
+        display: flex;
+      }
+      .demo {
+        background: rgba(0, 0, 0, 1);
+        padding: 40px;
+        max-width: 300px;
+        margin: 40px auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+      }
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        font-family: Avenir, sans-serif;
+        color: #111;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .cta {
+        position: relative;
+        margin: auto;
+        padding: 19px 22px;
+        transition: all 0.2s ease;
+      }
+      .cta:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: rgba(255, 171, 157, 0.5);
+        width: 56px;
+        height: 56px;
+        transition: all 0.3s ease;
+      }
+      .cta span {
+        position: relative;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 900;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        vertical-align: middle;
+      }
+      .cta svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: #111;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all 0.3s ease;
+      }
+
+      .cta:hover svg {
+        transform: translateX(0);
+      }
+      .cta:active {
+        transform: scale(0.96);
+      }
+    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body id="vanta">
+    <img
+      src="C:\Users\Malliga\Downloads\full_logo_white.png"
+      alt="The Eye Logo"
+      class="logo"
+    />
+    <div id="main">
+      <div class="decode-text">
+        <div class="text-animation">W</div>
+        <div class="text-animation">e</div>
+        <div class="text-animation">l</div>
+        <div class="text-animation">c</div>
+        <div class="text-animation">o</div>
+        <div class="text-animation">m</div>
+        <div class="text-animation">e</div>
+        <div class="space"></div>
+        <div class="text-animation">T</div>
+        <div class="text-animation">o</div>
+        <div class="space"></div>
+        <div class="text-animation">T</div>
+        <div class="text-animation">h</div>
+        <div class="text-animation">e</div>
+        <div class="space"></div>
+        <div class="text-animation">e</div>
+        <div class="text-animation">y</div>
+        <div class="text-animation">e</div>
+        <div class="text-animation">'</div>
+        <div class="text-animation">s</div>
+        <br />
+        <div class="text-animation">W</div>
+        <div class="text-animation">o</div>
+        <div class="text-animation">r</div>
+        <div class="text-animation">k</div>
+        <div class="text-animation">s</div>
+        <div class="text-animation">h</div>
+        <div class="text-animation">o</div>
+        <div class="text-animation">p</div>
+        <br />
+      </div>
+      <div class="form">
+        <div class="demo">
+          <section id="r1" class="section section-one active">
+            <label
+              for="name"
+              style="color: rgb(200, 251, 255)"
+              style="font-family: verdana"
+              ><b>Name</b></label
+            ><br />
+            <input
+              type="text"
+              placeholder="Enter Full Name"
+              style="color: rgb(0, 0, 0)"
+              name="Name"
+              required
+            />
+          </section>
+        </div>
+        <div class="demo" style="display: none">
+          <section id="r2" class="section section-two">
+            <label for="Rollno" style="color: rgb(200, 251, 255)"
+              ><b>Rollno</b></label
+            >
+            <input
+              type="RollNo"
+              placeholder="Enter RollNo"
+              style="color: rgb(0, 0, 0)"
+              name="Rollno"
+              required
+            />
+          </section>
+        </div>
+        <div class="demo" style="display: none">
+          <section id="r3" class="section section-three">
+            <label for="clg" style="color: rgb(200, 251, 255)"
+              ><b>College E-Mail</b></label
+            >
+            <input
+              type="college"
+              placeholder="College E-mail"
+              style="color: rgb(0, 0, 0)"
+              name="clg"
+              required
+            />
+          </section>
+        </div>
+        <div class="demo" style="display: none">
+          <section id="r4" class="section section-three">
+            <label for="mobileno" style="color: rgb(200, 251, 255)"
+              ><b>Mobile No</b></label
+            >
+            <input
+              type="mobileno"
+              placeholder="Enter Mobile No"
+              style="color: rgb(0, 0, 0)"
+              name="mobileno"
+              required
+            />
+          </section>
+        </div>
+
+        <button class="next" id="button-grow1" style="color: rgb(0, 0, 0)">
+          Next
+        </button>
+        <a href="C:\Users\Malliga\OneDrive\Desktop\html\welcome.html">
+          <button class="submit" id="button-grow2" style="color: rgb(0, 0, 0)">
+            Sign Up
+          </button></a
+        >
+      </div>
+      <script>
+        var n = 2;
+        $(".next").click(function (e) {
+          $(".demo:nth-child(" + n + ")").show();
+          var demo_l = $(".demo").length;
+          if (n == demo_l) {
+            var div = document.getElementById("button-grow1");
+            div.remove();
+            $(".next").attr("disabled", "disabled");
+          }
+          n++;
+        });
+      </script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xffffff,
+        backgroundColor: 0x0,
+        points: 8.0,
+        maxDistance: 20.0,
+        spacing: 20.0,
+        showDots: false,
+      });
+    </script>
+    <script>
+      /* ------------------------------------------------------------------------ *  
+    4 states per letter: Transparent | Line | Block | Visible.
+    These states are shuffled for a unique "decode" effect each time.
+    * ------------------------------------------------------------------------ */
+
+      function decodeText() {
+        var text = document.getElementsByClassName("decode-text")[0];
+        // debug with
+        // console.log(text, text.children.length);
+
+        // assign the placeholder array its places
+        var state = [];
+        for (var i = 0, j = text.children.length; i < j; i++) {
+          text.children[i].classList.remove("state-1", "state-2", "state-3");
+          state[i] = i;
+        }
+
+        // shuffle the array to get new sequences each time
+        var shuffled = shuffle(state);
+
+        for (var i = 0, j = shuffled.length; i < j; i++) {
+          var child = text.children[shuffled[i]];
+          classes = child.classList;
+
+          // fire the first one at random times
+          var state1Time = Math.round(Math.random() * (2000 - 300)) + 50;
+          if (classes.contains("text-animation")) {
+            setTimeout(firstStages.bind(null, child), state1Time);
+          }
+        }
+      }
+
+      // send the node for later .state changes
+      function firstStages(child) {
+        if (child.classList.contains("state-2")) {
+          child.classList.add("state-3");
+        } else if (child.classList.contains("state-1")) {
+          child.classList.add("state-2");
+        } else if (!child.classList.contains("state-1")) {
+          child.classList.add("state-1");
+          setTimeout(secondStages.bind(null, child), 100);
+        }
+      }
+      function secondStages(child) {
+        if (child.classList.contains("state-1")) {
+          child.classList.add("state-2");
+          setTimeout(thirdStages.bind(null, child), 100);
+        } else if (!child.classList.contains("state-1")) {
+          child.classList.add("state-1");
+        }
+      }
+      function thirdStages(child) {
+        if (child.classList.contains("state-2")) {
+          child.classList.add("state-3");
+        }
+      }
+
+      function shuffle(array) {
+        var currentIndex = array.length,
+          temporaryValue,
+          randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+      }
+
+      // Demo only stuff
+      decodeText();
+
+      // beware: refresh button can overlap this timer and cause state mixups
+      setInterval(function () {
+        decodeText();
+      }, 10000);
+    </script>
+  </body>
+</html>

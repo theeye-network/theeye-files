@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "fcc30ec5-24eb-4361-95c8-9624a5a57a44",
+		"name": "CTF API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19439529"
+	},
+	"item": [
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"21Z202\",\r\n    \"password\": \"aadi2003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/log_in",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"log_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Leaderboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/leaderboard",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"leaderboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Domains",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/domains?token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"domains"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Challenges by Domain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/challenges/LiNuX",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"challenges",
+						"LiNuX"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "See All Challenges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/challenges?token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"challenges"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Challenge",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/challenge/meow?token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"challenge",
+						"meow"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Challenge",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/search?q=mewo&token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "mewo"
+						},
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Flag",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/submit/meow?submission=linustech&token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"submit",
+						"meow"
+					],
+					"query": [
+						{
+							"key": "submission",
+							"value": "linustech"
+						},
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Progress Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/progress?token={{sessionToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"progress"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{sessionToken}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

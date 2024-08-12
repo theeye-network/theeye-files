@@ -1,0 +1,211 @@
+@font-face{font-family:jazeera_bold;src:url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_light;src:url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_medium;src:url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_regular;src:url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+
+:root {
+  --animate-duration: 5s;
+}
+
+* {
+    font-family:jazeera_regular;
+}
+
+h3, h4 {
+    font-family:jazeera_medium!important;
+}
+
+p {
+    font-family:jazeera_light;
+}
+
+a {
+    font-family: jazeera_regular;
+    text-decoration: none;
+    cursor: pointer!important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+#top{
+    font-family: sans-serif;
+    background: color #000;;
+}
+
+#down{
+    
+    font-family: sans-serif;
+    background-color:rgb(0,0,0,0.5);
+    opacity:0.5;
+}
+.workshop{
+    text-align: center;
+    font-family: sans-serif bold;
+    font-size:600%;
+    font-weight:700;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right,#2ecc71, #3498db, #9b59b6,#f39c12);
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
+    animation-timing-function: ease;
+    -webkit-background-size: 300%;
+    background-position: -100%;
+}
+
+@keyframes animate{
+
+    to{
+        background-position: 100%;
+    }
+}
+
+.sign{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #f0eeee;
+    font-size: 28px;
+    color: #f0f3f5;
+    transition: .3s ease;
+}
+
+.sign:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+}
+#desc{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    color: #fffefe
+
+    
+}
+.sessions{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+.session{
+    padding-left: 200px;
+    text-align:left;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+}
+.session2{
+    padding-left: 200px;
+    text-align:right;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+#s1{
+    padding-left: 275px;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+.s1{
+    
+    padding-left: 275px;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+.s2{
+    padding-left: 275px;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+.s3{
+    padding-left: 275px;
+    font-size: 24px;
+    color: #eceeef;
+    background-color: transparent;
+}
+
+.info{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+}
+.ldata{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 200px;
+    color:white;
+    background-color: transparent;
+}
+.dd{
+    padding-left: 200px;
+    color:white;
+    background-color: transparent;
+}
+#vanta {
+    background-color: black !important;
+    height: 300vh !important;
+    width: 100% !important;
+    position: absolute;
+    z-index: -1;
+  }
+
+.block {
+
+    display:inline-flexbox;
+    width: 800px;
+    height: 500px;
+    background-color: transparent;
+  }
+  
+  .container1 {
+    position: relative;
+    right: 200px;
+    text-align:justify;
+    background-color: transparent;
+  }
+
+  .container2 {
+    position:relative;
+    right:-400px;
+    text-align:justify;
+    background-color: transparent;
+  }
+
+  .container3{
+    position: relative;
+    right: 200px;
+    text-align:justify;
+    background-color: transparent;
+  }

@@ -1,0 +1,289 @@
+@font-face{font-family:jazeera_bold;src:url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_bold-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_light;src:url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_light_-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_medium;src:url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_medium-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+@font-face{font-family:jazeera_regular;src:url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff2) format("woff2"),
+url(https://www.jazeeraairways.com/assets/fonts/j9_regular-webfont.woff) format("woff");
+font-weight:400;
+font-style:normal
+}
+
+:root {
+  --animate-duration: 5s;
+}
+
+* {
+	font-family:jazeera_regular;
+}
+
+h3, h4 {
+	font-family:jazeera_medium!important;
+}
+
+p {
+	font-family:jazeera_light;
+}
+
+a {
+	font-family: jazeera_regular;
+	text-decoration: none;
+	cursor: pointer!important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	background-color: black;
+	overflow-x: hidden;
+}
+
+#background{
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(117,82,51);
+	background: -moz-linear-gradient(274deg, rgba(117,82,51,1) 0%, rgba(140,77,38,1) 35%, rgba(255,120,0,1) 100%);
+	background: -webkit-linear-gradient(274deg, rgba(117,82,51,1) 0%, rgba(140,77,38,1) 35%, rgba(255,120,0,1) 100%);
+	background: linear-gradient(274deg, rgba(117,82,51,1) 0%, rgba(140,77,38,1) 35%, rgba(255,120,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#755233",endColorstr="#ff7800",GradientType=1);
+	box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+	border-radius: 100px;
+}
+
+#main{
+	z-index: 1!important;
+	position: relative;
+	padding: 25px;
+}
+
+@media (min-width: 750px) {
+	nav{
+		margin-right: 50px;
+		float: right;
+	}
+	.mob{
+		display: none;
+	}
+}
+
+@media (max-width: 750px){
+	nav{
+		text-align: center!important;
+		float: unset!important;
+		font-size: 50%;
+	}
+	.mob{
+		display: block;
+	}
+}
+
+.nav-item{
+	color: white;
+	cursor: pointer;
+}
+
+.nav-boxed{
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.nav-item--underline {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.nav-item--underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item--underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#hero{
+	margin-top: 75px;
+	padding: 25px 25px 25px 0px;
+	position: relative;
+	display: block;
+	color: white;
+	background-color: transparent;
+	width: 100%!important;
+	text-align: center!important;
+	height: 450px!important;
+	align-content: center!important;
+	align-self: center!important;
+}
+
+@media (min-width: 750px) {
+	#hero>h1{
+		padding: 125px 75px 0px 75px;
+		font-family: jazeera_bold;
+		font-size: 500%;
+		font-weight:700;
+	  color: transparent;
+	  text-transform: uppercase;
+	  background-image: linear-gradient(to right,#2ecc71, #3498db, #9b59b6,#f39c12);
+	  -webkit-background-clip: text;
+	  animation: animate 15s linear infinite;
+	  animation-timing-function: ease;
+	  -webkit-background-size: 300%;
+	  background-position: -100%;
+	}
+
+}
+
+@media (max-width: 750px) {
+	#hero>h1{
+		font-family: jazeera_bold;
+		font-size: 400%;
+		font-weight:700;
+	  color: transparent;
+	  text-transform: uppercase;
+	  background-image: linear-gradient(to right,#2ecc71, #3498db, #9b59b6,#f39c12);
+	  -webkit-background-clip: text;
+	  animation: animate 15s linear infinite;
+	  animation-timing-function: ease;
+	  -webkit-background-size: 300%;
+	  background-position: -100%;
+	}
+	#hero{
+		margin-bottom: 50px;
+	}
+
+}
+
+@keyframes animate{
+
+    to{
+        background-position: 100%;
+    }
+}
+
+#about{
+	margin-top: 75px;
+	color: white;
+	background-color: rgb(0,0,0,0.6);
+}
+
+#guidelines{
+	background-color: rgb(0,0,0,0.6);
+	margin-top: 75px;
+	color: white;
+}
+
+
+@media (min-width: 750px) {
+	#guidelines{
+		text-align: right;
+	}
+}
+
+@media (max-width: 750px){
+	#guidelines{
+		text-align: left;;
+	}
+}
+
+#committee{
+	margin-top: 125px;
+	color: white;
+	background-color: rgb(0,0,0,0.6);
+}
+
+.person{
+	margin-top: 75px;
+}
+
+@media (min-width: 750px) {
+	.person>img {
+		width: 150px;
+		border-radius: 50%;
+		float: left;
+		padding-right: 50px;
+	}
+}
+
+@media (max-width: 750px) {
+	.person>img {
+		width: 150px;
+		border-radius: 50%;
+		padding-right: 50px;
+		margin-bottom: 25px;
+		margin-left: 25%;
+	}
+	.person>h2,h3{
+		text-align: center;
+	}
+}
+
+#contact{
+	margin-top: 125px;
+	color: white;
+	background-color: rgb(0,0,0,0.6);
+}
+
+
+@media (min-width: 750px) {
+	#contact{
+		text-align: right;
+	}
+}
+
+@media (max-width: 750px){
+	#contact{
+		text-align: left;;
+	}
+}
+
+#to-top{
+	position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+#to-top{
+	display: none;
+}

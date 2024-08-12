@@ -1,0 +1,30 @@
+{% extends "skeleton.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+
+<style type="text/css">
+    :root {
+      --primary-color: #ffffff; /* Text color */
+      --secondary-color: #171717; /* Boxes and divs color */
+      --background-color: #000000; /* Background color */
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    </style>
+
+         <main class="one-main new-login ng-scope" data-ng-controller="signInController as vm">
+
+         </main>
+
+{% endblock %}

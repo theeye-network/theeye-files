@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The EYE</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="top">
+      <img
+        src="logo.png"
+        alt="The Eye Logo"
+        style="width:200px;margin-left:40%"
+      />
+      <h1 class="workshop">
+        Cyber Security<br />
+        Workshop
+      </h1>
+      <div style="display: flex; align-items: center; justify-content: center">
+        <button type="button" class="sign">Sign Up</button><br /><br />
+      </div>
+      <p id="desc"></p>
+      <p><br /><br /><br /></p>
+    </div>
+
+    <div id="down">
+      <style></style>
+      <div id="vanta"></div>
+      <p class="sessions"><u>Sessions</u></p>
+
+      <div class="container1" data-aos="fade-up-right">
+        <div class="block">
+          <p class="session"><b>Session 1:</b></p>
+          <pre class="s1">
+            Session 1 will cover com`n IT Laws and real-life Analysis of
+            Security Incidents and how to be safe and report cybercrimes. It
+            will be a non-technical session.
+          </pre>
+          <pre class="s1">
+            20 Minutes :- IT Laws
+            20 Minutes :- Why Cybersecurity is Important As an Individual
+            10 Minutes :- A Sample Security Incident, and SOCs
+            10 Minutes :- Q&A Session</pre
+          >
+        </div>
+      </div>
+      <hr />
+      <div class="container2" data-aos="fade-up-left">
+        <div class="block">
+          <p class="session2"><b>Session 2:</b></p>
+          <pre class="s2">
+            Session 2 will cover Technical Training with simulated
+            CyberPhysicalSystems, Web Attacks, Viruses and Ransomware, etc. This
+            will cover a brief on CPS/IoT/SCADA Hacking, XSS Attacks, and the
+            Wireshark Tool.
+          </pre>
+          <pre class="s2">
+            20 Minutes :- CPS/IoT/SCADA and a live attack on a simulated system
+            10 Minutes :- XSS Attacks and a live sample XSS Attack
+            10 Minutes :- the Wireshark Tool
+            10 Minutes :- Viruses and Ransomware, A Ransomware Case Study
+            10 Minutes :- Q&A Session</pre
+          >
+        </div>
+      </div>
+      <hr />
+      <div class="container3" data-aos="fade-up-right">
+        <div class="block">
+          <p class="session"><b>Session 3:</b></p>
+          <pre class="s3">
+            Session 3 will introduce the audiences to Dark Web and Dark Web
+            Monitoring. It will also give a brief on Networking Models and
+            Topography, and the security aspect in networks. It will also
+            demonstrate some social engineering.
+          </pre>
+          <pre class="s3">
+            Minutes :- Proxy
+            5 Minutes :- Dark Web and TOR
+            5 Minutes :- DarkOwl
+            5 Minutes :- Dark Web Monitoring
+            10 Minutes :- OSI Model and TCP/IP Model
+            10 Minutes :- HTTP vs HTTPS, Wireshark with live MITM attack
+            10 Minutes :- ZPhisher and Phishing Attacks with sample live attack
+            10 Minutes :- Q&A Session</pre
+          >
+        </div>
+      </div>
+      <hr />
+      <p class="info"><u>INFO</u></p>
+      <dl>
+        <dt class="ldata">Code of Conduct</dt>
+        <dd class="dd">...</dd>
+        <dt class="ldata">Exemption procedures</dt>
+        <dd class="dd">...</dd>
+        <dt class="ldata">Timings</dt>
+        <dd class="dd">...</dd>
+        <dt class="ldata">Venues</dt>
+        <dd class="dd">...</dd>
+        <dt class="ldata">Join the Club</dt>
+        <dd class="dd">...</dd>
+      </dl>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      VANTA.DOTS({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
+    <script>
+      new TypeIt("#desc", {
+        speed: 50,
+        startDelay: 900,
+      })
+        .type("this is a 2 session", { delay: 100 })
+        .move(-8, { delay: 100 })
+        .delete(1)
+        .type("3", { delay: 400 })
+
+        .move(null, { to: "START", instant: false, delay: 300 })
+        .move(1, { delay: 200 })
+        .delete(1)
+        .type("T", { delay: 225 })
+        .pause(200)
+        .move(2, { instant: true })
+        .pause(200)
+        .move(null, { to: "END" })
+        .type(" workshop on CyberSecutty")
+        .move(-2, { delay: 150 })
+        .delete(1)
+        .type("r")
+        .pause(200)
+        .type("i")
+        .pause(200)
+        .move(null, { to: "END" })
+        .type(".")
+        .go();
+    </script>
+  </body>
+</html>

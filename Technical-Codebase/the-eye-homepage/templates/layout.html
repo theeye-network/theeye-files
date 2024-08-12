@@ -1,0 +1,219 @@
+<!--Contributed by Manoj CSE G1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %}{% endblock %} | The Eye, CSEA</title>
+    <link rel="stylesheet" href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('static',filename='style.css')}}" />
+    <link rel="stylesheet" href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('static',filename='styles.css')}}" />
+    <link rel="icon" href="https://i.imgur.com/ZAp9GVZ.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      .footerimage:hover {
+        -webkit-filter: grayscale(0) !important;
+        filter: none !important;
+      }
+    </style>
+    <style>
+      @media only screen and (max-width: 700px) {
+        footer {
+          grid-template-columns: 1fr;
+          grid-column-gap: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav style="z-index:999;">
+      <ul class="nav-links">
+        <li class="nav-link"><a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('home')}}">Home</a></li>
+        <li class="nav-link"><a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('about')}}">About</a></li>
+        <li class="nav-link"><a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('blog')}}">Blog</a></li>
+        <div class="dropdown">
+          <li class="nav-link"><a id="kb">Knowledge Base</a></li>
+          <div class="dropdown-content">
+            <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='sec')}}"
+              >Security Guidelines</a
+            >
+            <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='white')}}">White Papers</a>
+            <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='research')}}"
+              >Research Papers</a
+            >
+            <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='quart')}}"
+              >Quarterly Report</a
+            >
+          </div>
+        </div>
+        <li class="nav-link">
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('increp')}}">Incident Reporting Form</a>
+        </li>
+        <li class="nav-link">
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('vulnrep')}}">Vulnerability Reporting Form</a>
+        </li>
+      </ul>
+      <div class="ham-container" onclick="hamButtonToggle(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <ul class="ham-nav-links">
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('home')}}" class="ham-link">Home</a>
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('about')}}" class="ham-link">About</a>
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('blog')}}" class="ham-link">Blog</a>
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='sec')}}" class="ham-link"
+            >Security Guidelines</a
+          >
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='white')}}" class="ham-link"
+            >White Papers</a
+          >
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='research')}}" class="ham-link"
+            >Research Papers</a
+          >
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('listOfLinks',&#32;type='quart')}}" class="ham-link"
+            >Quarterly Report</a
+          >
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('increp')}}" class="ham-link"
+            >Incident Reporting Form</a
+          >
+          <hr />
+        </li>
+        <li>
+          <a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{url_for('vulnrep')}}" class="ham-link"
+            >Vulnerability Reporting Form</a
+          >
+          <hr />
+        </li>
+      </ul>
+    </nav>
+    <main>{% block main %}{% endblock %}</main>
+    <footer>
+      <div id="faqs">
+        <h3>Website Developed By</h3>
+        <ul>
+          <li>Manojkumar K.</li>
+          <li>Udhith Akash R.R.</li>
+          <li>Anbuselvan M.</li>
+          <li>Lohith S.</li>
+          <li>Arun U.S.</li>
+          <li>Aaditya Rengarajan</li>
+          <li>Navaneetha Krishnan S</li>
+        </ul>
+      </div>
+      <div id="related-links">
+        <h3>Related Links</h3>
+        <ul>
+          <li>
+           <a href="http://f2e7dezm47yrddezmlvzrogkon2ljb4kewn5xyik2ozfrvdkufn7gfad.onion/">
+             Visit in TOR
+           </a>
+          </li>
+          <li>
+            <a href="https://cybercrime.gov.in/" target="_blank"
+              >Report Cybercrimes to the Government of India</a
+            >
+          </li>
+          <li>
+            <a href="https://www.ceir.gov.in/Request/CeirUserBlockRequestDirect.jsp" target="_blank"
+              >Request blocking lost/stolen mobile</a
+            >
+          </li>
+          <li>
+            <a href="https://www.nciipc.gov.in/" target="_blank"
+              >National Critical Information Infrastructure Protection Center</a
+            >
+          </li>
+          <li><a href="https://cert-in.org.in/" target="_blank">CERT-IN</a></li>
+        </ul>
+      </div>
+      <div id="social-media">
+        <h3>Follow us on social media</h3>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/welcometotheeye/" target="_blank"
+              ><img
+                src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png"
+                height="40px"
+                style="
+                  filter: grayscale(1);
+                  -webkit-filter: grayscale(1);
+                  filter: gray;
+                "
+                class="footerimage"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/visio-protectoris"
+              ><img
+                src="https://imgs.search.brave.com/Gw6N5WYsVlueLx0Vyw4cbwnibZP7Qq2hIUZHpmY3nb4/rs:fit:512:512:1/g:ce/aHR0cHM6Ly9sb2dv/c3BuZy5vcmcvZG93/bmxvYWQvbGlua2Vk/aW4vbG9nby1saW5r/ZWRpbi1pY29uLTUx/Mi5wbmc"
+                height="40px"
+                style="
+                  filter: grayscale(1);
+                  -webkit-filter: grayscale(1);
+                  filter: gray;
+                "
+                class="footerimage"
+            /></a>
+          </li>
+          <li>
+            <a href="https://medium.com/@welcometotheeye"
+              ><img
+                src="https://miro.medium.com/1*m-R_BkNf1Qjr1YbyOIJY2w.png"
+                height="40px"
+                style="filter: grayscale(1); -webkit-filter: grayscale(1)"
+                class="footerimage"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      function hamButtonToggle(el) {
+        el.classList.toggle("change");
+        if (el.classList.contains("change")) {
+          document.body.style.backgroundColor = "white";
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.backgroundColor = "black";
+          document.body.style.overflowY = "visible";
+        }
+      }
+      const hamburger = document.querySelector(".ham-container");
+      const nav_links = document.querySelector(".ham-nav-links");
+      const links = document.querySelectorAll(".ham-nav-links li");
+      hamburger.addEventListener("click", () => {
+        nav_links.classList.toggle("open");
+        links.forEach((link) => {
+          link.classList.toggle("fade");
+        });
+      });
+    </script>
+  </body>
+</html>

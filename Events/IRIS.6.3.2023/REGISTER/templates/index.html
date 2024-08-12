@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRIS 2023 | The Eye, CSEA, PSG College of Technology</title>
+  <link rel="stylesheet" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',filename='styles.css')}}"/>
+  <link rel="icon" href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='FAVICON.png')}}"/>
+  <link rel="stylesheet" href="https://ianlunn.github.io/Hover/css/hover.css"/>
+</head>
+<body>
+  <div id="main">
+
+    <div id="hero">
+      <h1>IRIS 2023</h1>
+      {% if full=="true" %}
+      <a class="nav-item nav-boxed hvr-grow">REGISTRATIONS ARE FULL</a>
+      {% else %}
+      <a href="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('sign_up')}}" class="nav-item nav-boxed hvr-grow">SIGN UP</a>
+      {% endif %}
+    </div>
+
+    <div id="background"></div>
+
+    <div id="about">
+      <h1>ABOUT</h1><b>DATES : 4TH, 5TH AND 6TH MARCH 2022</b><br/>
+      <p>This event will have 2 rounds.This is open to CSE, ECE, EEE, IT and AMCS Department Students of 1st, 2nd, 3rd and 4th Years.</p>
+      <h2>Round 1 (Online)</h2>
+            <p>Round 1 will have 2 streams: a Capture-The-Flag stream for ethical
+            hackers and a Hackathon for application developers. The players are to
+            choose from either stream and will have to solve their assigned problem(s)
+            within the given time-frame from 10:00AM March 4 to 6:00PM March 5. Top 5
+            players from each stream will be selected for round 2.</p>
+      <h2>Round 2 (Offline)</h2>
+            <p>Finalists will pose as an Information Security Manager at an Indian bank
+            and will face a randomly chosen incident from a list of bank-related cyber-incidents,
+            and will have to write and submit a report to the judging panel. This event wil take place
+            offline on March 6 from 4:30PM to 6:00PM.</p>
+    </div>
+
+    <div id="committee">
+      <h1>ORGANIZING COMMITTEE</h1>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='aadi.jpg')}}"/>
+        <h2>Aaditya Rengarajan</h2>
+        <h3>National Security Database Certified Penetration Tester</h3>
+        <p>Aaditya Rengarajan is a National Security Database Certified Penetration Tester, recognized by the Governments of India and Kuwait as a Security Researcher and has more than 1 year of experience in the field of CyberSecurity.</p>
+      </div>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='dhanu.png')}}"/>
+        <h2>Dhanush Gowdhaman</h2>
+        <h3>CTF Player and Security Researcher</h3>
+        <p>Dhanush Gowdhaman is an active CTF Player and Ethical Hacker with experience in multiple CTF-Based ethical hacking competitions in the past.</p>
+      </div>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='aadhi.png')}}"/>
+        <h2>Aadhithyashri Manikandan</h2>
+        <h3>CTF Player and Security Researcher</h3>
+        <p>Aadhithyashri Manikandan is an active CTF Player with experience in CTF-Based ethical hacking competitions, and also has experience in framing encryption algorithms in the field of cryptography.</p>
+      </div>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='sub.png')}}"/>
+        <h2>Soorya Subramani</h2>
+        <h3>Security Researcher</h3>
+        <p>Soorya Subramani is a security researcher and is somewhat new to the field of Cybersecurity, yet has a lot of information and knowledge to share during the event.</p>
+      </div>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='rohith.png')}}"/>
+        <h2>Rohith Sundharamurthy</h2>
+        <h3>Security Awareness Specialist</h3>
+        <p>Rohith's exceptional social skills and ability to connect with people can be leveraged to raise security awareness. His design thinking expertise also allows him to come up with creative and innovative security solutions.</p>
+      </div>
+      <div class="person">
+        <img src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',&#32;filename='ash.png')}}"/>
+        <h2>Ashwant Krishna</h2>
+        <h3>Security Researcher</h3>
+        <p>Ashwant Krishna is a security researcher and has fundamental knowledge of Maltego, NMap, and CEH syllabus.</p>
+      </div>
+    </div>
+
+    <div id="committee">
+      <h1>VOLUNTEERING COMMITTEE</h1>
+      <p>This website was developed by the volunteering committee comprising of Shruti S, M Hemali, Sanjay P, Harri S and Amruth Warrier.</p>
+    </div>
+
+    <a class="nav-item nav-boxed" href="index.html#main" id="to-top">BACK TO TOP</a>
+
+  </div>
+
+  <script type="text/javascript">
+    const btnScrollToTop = document.querySelector("#to-top");
+
+    // scroll to top of page when button clicked
+    btnScrollToTop.addEventListener("click", e => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+
+    // toggle 'scroll to top' based on scroll position
+    window.addEventListener('scroll', e => {
+      btnScrollToTop.style.display = window.scrollY > 40 ? 'block' : 'none';
+    });
+  </script>
+  <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',filename='three.r134.js')}}"></script>
+  <script type="text/javascript" src="https://files.cseatheeye.com/Events/IRIS.6.3.2023/REGISTER/templates/{{url_for('static',filename='vanta.globe.js')}}"></script>
+  <script>
+  VANTA.GLOBE({
+    el: "#background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xff7800,
+    color2: 0xff7800,
+    backgroundColor: 0x0
+  })
+  </script>
+</body>
+</html>

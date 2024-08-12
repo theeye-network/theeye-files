@@ -1,0 +1,33 @@
+INR 500: Student (Workshop, Conference, Expo, Lunch, Tea, Snacks)
+INR 750: Student + Swag (Workshop, Conference, Expo, Lunch, Tea, Snacks and Swag ~ TShirt)
+INR 1000: Individual - Conference (Training, Conference, Expo, Lunch, Tea, Snacks, Swag ~ Tshirt)
+INR 1500: Pair - Corporate (Conference, Expo, Lunch, Tea, Snacks: 2 days conf.)
+INR 3000: 5 Members - Corporate (Conference, Expo, Lunch, Tea, Snacks: 2 days conf.)
+
+INR 500 - Call for Papers, 
+FREE - Call for Workshops (will be done by The Eye)
+Trainings by certified members from ISAC
+
+Topics for Papers and Workshops:
+- Critical Infrastructure & SCADA networks Security
+- IoT
+- WoT
+- ICS/SCADA
+- Smart City
+- Mobile Security
+- Web Security
+- Dark-Web
+- Open-Source Intelligence
+- Social Media Intelligence
+- Artificial Intelligence
+- Cryptography
+- Offensive Security and Information Warfare
+- Advanced Persistence Threats (APT)
+- Banking, Financial, and Economic Warfare
+- Fraud Risk Management
+- Blockchain and Bitcoin
+- Governance Risks and Compliance (GRC)
+- Digital Forensics
+
+
+PSG The Eye, ISAC, Coimbatore Cyber Police, Breachpoint, Cyberange, EQUATE? (invite cybersec. speaker from EQUATE), Mahindra? (invite cybersec. speaker from Mahindra), Sridhar Vembu?

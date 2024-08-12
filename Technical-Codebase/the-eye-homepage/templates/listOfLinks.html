@@ -1,0 +1,20 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    {{type}}
+{% endblock %}
+
+
+{% block main %}
+<h1>{{type}}</h1>
+<h2>Find {{type}} we have released here:</h2>
+{% if relist==[] %}
+<p>Nothing is available right now. Come back later.</p>
+{% else %}
+{% for i in relist %}
+<p><a href="https://files.cseatheeye.com/Technical-Codebase/the-eye-homepage/templates/{{i['url']}}" style="color:white;text-decoration: none;border-bottom: 1px dotted white;" target="_blank">{{i['title']}}</a></p>
+{% endfor %}
+{% endif %}
+<br/><br/>
+{% endblock %}

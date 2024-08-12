@@ -1,0 +1,155 @@
+<html lang="en">
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <title>{% block title %}{% endblock %} | Oculus UI</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" type="text/css" href="https://account.samsung.com/accounts/v1/resources/one-ui/css/default.css">
+      <link rel="stylesheet" type="text/css" href="https://account.samsung.com/membership/styles.42195f39ffe9d5a92526.css">
+      <style type="text/css">
+         .logo-ui{
+            font-size: 18px;
+            font-weight: lighter;
+background: rgb(255,255,255);
+background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(56,56,56,1) 64%, rgba(165,165,165,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(56,56,56,1) 64%, rgba(165,165,165,1) 100%);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(56,56,56,1) 64%, rgba(165,165,165,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#a5a5a5",GradientType=1);
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+         }
+      </style>
+   </head>
+   <body class="one-card-ui ng-scope block-ui block-ui-anim-fade" block-ui="main" aria-busy="false">
+      <div class="wrapper ng-scope">
+
+
+
+         <header class="iam-header new-header" style="padding-top: 25px">
+      <div class="header">
+         <div class="iam-header-inner top-logo" global-navigation-bar-logo="" _nghost-bjb-c17="">
+            <div class="iam-inner">
+               <h1><span class="logo-ui">OCULUS UI</span></h1>
+            </div>
+         </div>
+         <div class="iam-header-inner top-menu" global-navigation-bar-menu="" _nghost-bjb-c18="">
+            <div class="menu-area">
+               <div class="top-account">
+                  <div class="account-icon"><button class="account-btn"><img alt="Profile Layer Open" src="https://files.cseatheeye.com/Oculus/Oculus%20UI/templates/{{url_for('profile_picture')}}"></button></div>
+                  <div class="account-bar">
+                     <section class="inner">
+                        <h2 class="blind">Account Information</h2>
+                        <img alt="" src="https://files.cseatheeye.com/Oculus/Oculus%20UI/templates/{{url_for('profile_picture')}}">
+                        <div class="tx" style="display:block"><strong>Rengarajan Aaditya</strong></div>
+                     </section>
+                     <div class="signout"><button class="mbr-button">Sign out</button></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="header-inner">
+            <div class="slidebox">
+               <div class="slide_menu">
+                  <drag-scroll class="tab_menu scroll" style="pointer-events: auto;">
+                     <div class="drag-scroll-wrapper drag-scroll-container">
+                        <div class="drag-scroll-content" drag-scroll="true">
+
+                           <li class="lnb-menu-item active" drag-scroll-item="" style="display: inline-block;"><a class="link_menu">Dashboard</a></li>
+
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Members</a></li>
+
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Blog Posts</a></li>
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Security Guidelines</a></li>
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">White Papers</a></li>
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Research Papers</a></li>
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Quarterly Reports</a></li>
+
+                           <li class="lnb-menu-item" drag-scroll-item="" style="display: inline-block;"><a class="link_menu" href="https://files.cseatheeye.com/membership/">Incident Zone</a></li>
+                        </div>
+                     </div>
+                  </drag-scroll>
+               </div>
+            </div>
+         </local-navigation-bar-slide-menu>
+      </div>
+   </local-navigation-bar>
+</header>
+
+
+{% block main %}{% endblock %}
+
+         <footer class="one-footer" role="contentinfo">
+            <div class="footer-inner">
+               <div class="footer-logo"><img src="https://i.imgur.com/QlzP4jn.png" onerror="this.src='https://i.imgur.com/QlzP4jn.png';" alt="The Eye"></div>
+               <address class="footer-address">The Eye "Visio Protectoris" Club, Computer Science and Engineering Association. PSG College of Technology.</address>
+               <div class="footer-links" role="link">
+                  <a href="https://cseatheeye.com/" title="Open links in a new window The Eye" target="_blank">Homepage</a>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+      <script>
+         $(document).ready(function () {
+         
+           inputEvent();
+           if ($('form').find(':input')[0] !== undefined) {
+             $(':focus').blur();
+             $('form').find(':input')[0].focus();
+           }
+         });
+         
+         var attributeObserver = new MutationObserver(function (mutations) {
+           mutations.forEach(function (mutation) {
+             if (mutation.target.className.includes('ng-not-empty')) {
+               var $input = $(mutation.target)
+               var $label = $input.parent('div.one-input-container')
+         
+               $label.addClass('active');
+               $label.siblings('div.flexbdy').addClass('off');
+             };
+           })
+         });
+         
+         var inputEvent = function () {
+           var $inputs = $('form').find(':input');
+           $inputs.each(function () {
+               var $input = $(this);
+               var $label = $input.parent('div.one-input-container');
+         
+               attributeObserver.observe($input.get(0), {
+                 attributes: true,
+                 attributeFilter: ['class'],
+                 attributeOldValue: false,
+                 characterData: false,
+                 characterDataOldValue: false,
+                 childList: false,
+                 subtree: false
+               });
+         
+               if ($input.val()) {
+                 $label.addClass('active');
+                 $label.siblings('div.flexbdy').addClass('off');
+               }
+         
+               $input.focusin(function () {
+                 $label.addClass('focus');
+                 $label.siblings('div.flexbdy').addClass('off');
+               });
+         
+               $input.change(function () {
+                 $label.addClass('active');
+               });
+         
+               $input.focusout(function () {
+                 $label.removeClass('focus');
+         
+                 if (!$input.val()) $label.removeClass('active').siblings('div.flexbdy').removeClass('off');
+               });
+             }
+           );
+         }
+      </script>
+   </body>
+</html>
